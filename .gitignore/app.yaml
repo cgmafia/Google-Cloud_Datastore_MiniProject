@@ -1,3 +1,0 @@
-runtime: nodejs10
-env_variables:
-  REDIRECT_URL: https://gcptest.appspot.com/oauth2callback

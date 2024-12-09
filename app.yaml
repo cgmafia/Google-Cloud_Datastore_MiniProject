@@ -1,3 +1,13 @@
-runtime: nodejs10
+runtime: custom
+env: flex
+
+# Optional: Custom instance configuration
+instance_class: F2
+
+# Specify environment variables
 env_variables:
-  REDIRECT_URL: https://gcptest.appspot.com/oauth2callback
+  NODE_ENV: "production"
+  GOOGLE_APPLICATION_CREDENTIALS: "/usr/src/app/src/config/key.json"
+
+# Ensure traffic is directed to port 8080
+entrypoint: npm start
